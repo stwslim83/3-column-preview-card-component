@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: hsl(0, 0%, 95%);
+}
+
+///font-family: 'Big Shoulders Display', cursive;
+///font-family: 'Lexend Deca', sans-serif;
+
+//////// COLORS //////
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+$transparent-white: hsla(0, 0%, 100%, 0.75); //paragraphs
+$very-light-gray: hsl(0, 0%, 95%); // background, headings, buttons
+
+.card-wrapper{
+    border-radius: .5rem;
+    width: 750px;
+    display: grid;
+    grid-template-areas: 
+    'sedan suv luxury'
+    'footer footer footer';
+}
+
+.card-wrapper section{
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    gap: 3rem;
+    
+    img{
+        width: 50px;
+    }
+}
+
+
+h1{
+    color: $very-light-gray;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+
+p{
+    color: $transparent-white;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+button{
+    padding: .7rem;
+    width: 140px;
+    border-radius: 25px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.luxury{
+    border-radius: 0 .5rem .5rem 0;
+    background-color: $very-dark-cyan;
+    grid-area: luxury;
+
+    button{
+        color: $very-dark-cyan;
+    }
+
+    button:hover{
+        background-color: $very-dark-cyan;
+        color: $transparent-white;
+        border: 2px solid white;
+    }
+}
+
+.sedan{
+    background-color: $bright-orange;
+    border-radius: .5rem 0 0 .5rem;
+    grid-area: sedan;
+
+    button{
+        color: $bright-orange;
+    }
+
+    button:hover{
+        background-color: $bright-orange;
+        color: $transparent-white;
+        border: 2px solid white;
+    }
+}
+
+.suv{
+    background-color: $dark-cyan;
+    grid-area: suv;
+
+    button{
+        color: $dark-cyan;
+    }
+
+    button:hover{
+        background-color: $dark-cyan;
+        color: $transparent-white;
+        border: 2px solid white;
+    }
+}
+
+
+button:hover{
+    cursor: pointer;
+}
+
+
+
+footer{
+    grid-area: footer;
+}
+
+.attribution { 
+    font-size: 11px;
+    display: grid;
+    place-items: center;
+    }
+
+    .attribution a {
+         color: hsl(228, 45%, 44%); 
+        }
+
+        a:hover{
+            color: black;
+         }
+
+
+@media screen and (min-device-width: 280px) and(max-device-width: 650px){
+    
+    .card-wrapper{
+        width: 100%;
+        display: block;
+    grid-template-areas:  
+    'sedan'
+    'suv'
+    'luxury'
+    'footer';
+    }
+
+    .sedan{
+        border-radius: .5rem .5rem 0 0;
+}
+
+    .luxury{
+        border-radius: 0 0 .5rem .5rem;
+    }
+}
