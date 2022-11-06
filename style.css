@@ -113,7 +113,7 @@ a:hover {
 
 @media screen and (min-device-width: 280px) and (max-device-width: 650px) {
   .card-wrapper {
-    width: 100%;
+    width: 90%;
     display: block;
     grid-template-areas: "sedan" "suv" "luxury" "footer";
   }
